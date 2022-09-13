@@ -1,4 +1,4 @@
-# Backend
+# API
 
 The backend creates an API that is accessable to the frontend website as well as for direct interaction via API calls. This is written in Python and uses [Flask](https://flask.palletsprojects.com/en/2.2.x/).
 
