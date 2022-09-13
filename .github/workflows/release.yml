@@ -1,0 +1,78 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+        level:
+          type: choice
+          description: Release type
+          options: 
+          - patch
+          - minor
+          - major
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # Get latest released version
+      - uses: oprypin/find-latest-tag@v1
+        with:
+          repository: benknight135/thirty-knights  # The repository to scan.
+          releases-only: true  # All relevant tags have a GitHub release for them.
+        id: latest-tag  # The step ID to refer to later.
+      # Generate new release version
+      - name: Generate new version
+        uses: actions-ecosystem/action-bump-semver@v1
+        id: bump-version
+        with:
+          current_version: ${{ steps.latest-tag.outputs.tag }}
+          level: ${{ github.event.inputs.level }}
+      # Add generated version to VERSION file
+      # remove 'v' character from version string
+      - name: Add to Version file
+        shell: bash
+        run: |
+          PROJ_VERSION=${{ steps.bump-version.outputs.new_version }}
+          PROJ_VERSION=${PROJ_VERSION:1}
+      # Create GitHub release
+      - name: GitHub release
+        uses: softprops/action-gh-release@v1
+        with:
+          draft: false
+          body_path: release.md
+          tag_name: v${{ env.PROJ_VER }}
+      # Deploy to heroku
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "thirty-knights"
+          heroku_email: "benknight135@gmail.com"
+        env:
+          HD_PROJ_VER: ${{ env.PROJ_VER }}
+      # Get git variables
+      - name: Get commit variables
+        id: commit-vars
+        shell: bash
+        run: |
+          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+      # Merge main into production
+      - name: Merge main -> prod
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          target_branch: prod
+          github_token: ${{ github.token }}
+          message: merged ${{ steps.commit-vars.outputs.sha_short }}
+
+  cleanup:
+    needs: [deploy]
+    runs-on: ubuntu-latest
+
+    steps:
+      # Cleanup artifacts used for job sharing
+      - uses: geekyeggo/delete-artifact@v1
+        with:
+          name: version-file-${{ github.sha }}

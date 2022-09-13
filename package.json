@@ -1,0 +1,10 @@
+{
+  "name": "thirtyknights",
+  "version": "0.0.0",
+  "description": "Travel blog for inter-railing trip",
+  "author": "Ben Knight",
+  "license": "MIT",
+  "scripts": {
+    "heroku-prebuild": "node updateversions.js $PROJ_VER"
+  }
+}
