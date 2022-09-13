@@ -1,48 +1,67 @@
 import React, { useState, useEffect } from 'react';
 
-function BlogContainer({api_base_url}) {
-  const [apiServerTime, setApiServerTime] = useState(null);
-  const [isApiServerTimetLoaded, setIsApiServerTimeLoaded] = useState(false);
-  const [apiServerTimeError, setApiServerTimeError] = useState(0);
+function PostInfoItem({postInfo}){
+  return (
+    <p>
+      {postInfo.title}
+    </p>
+  );
+}
 
-  // useEffect(()=>{
-  //   handleTime();
-  // }, [])
-
-  useEffect(()=>{
-    handleTime();
-  })
-
-  const handleTime = () => {
-    fetch(api_base_url+"/time")
-    .then(res => res.json())
-    .then(
-      (result) => {
-        setIsApiServerTimeLoaded(true);
-        setApiServerTime(result.time);
-      },
-      (error) => {
-        setIsApiServerTimeLoaded(true);
-        setApiServerTimeError(error);
-        console.log(error);
-      }
+function PostsInfoList({postsInfo, isLoaded, error}){
+  if (!isLoaded){
+    return(
+      <div>
+        <p>Loading...</p>
+      </div>
+    )
+  } else if (error){
+    return(
+      <div>
+        <p>Failed to load posts</p>
+      </div>
+    )
+  } else {
+    return(
+      <div>
+        {postsInfo.map(postInfo => (
+          <PostInfoItem key={postInfo.key} postInfo={postInfo} />
+        ))}
+      </div>
     )
   }
+}
 
-  const timeText = (serverTime, isLoaded, error) => {
-    if (!isLoaded){
-      return "Loading..."
+function BlogContainer({api_base_url}) {
+  const [postsInfo, setPostsInfo] = useState(null);
+  const [isPostsInfoLoaded, setIsPostsInfoLoaded] = useState(false);
+  const [postsInfoError, setPostsInfoError] = useState(0);
+
+  useEffect(()=>{
+    const handleFetchUpdate = () => {
+      fetch(api_base_url+"/postsinfo")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setIsPostsInfoLoaded(true);
+          setPostsInfo(result.info);
+        },
+        (error) => {
+          setIsPostsInfoLoaded(true);
+          setPostsInfoError(error);
+          console.log(error);
+        }
+      )
     }
-    if (error){
-      return "Failed to load server time";
-    }
-    return serverTime
-  }
+
+    handleFetchUpdate();
+  }, [api_base_url])
   
   return (
-    <div>
-      <h1>The time is: {timeText(apiServerTime, isApiServerTimetLoaded, apiServerTimeError)}</h1>
-    </div>
+    <PostsInfoList
+      postsInfo={postsInfo}
+      isLoaded={isPostsInfoLoaded}
+      error={postsInfoError} />
   )
 }
 
