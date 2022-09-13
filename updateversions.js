@@ -8,7 +8,7 @@ function updatePackageVersion(version_str, package_folder) {
     require('fs').writeFileSync(package_folder + '/package.json', JSON.stringify(pkg, null, 2));
 }
 
-package_folders = [ '.' , './frontend' ]
+package_folders = [ '.' ]
 for (let i = 0; i < package_folders.length; i++) {
     updatePackageVersion(version, package_folders[i])
 }
