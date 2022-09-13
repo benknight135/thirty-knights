@@ -8,7 +8,10 @@ function App() {
         api_base_url = process.env.REACT_APP_API_URL;
     }
     return (
-        <BlogContainer api_base_url={api_base_url} />
+        <div>
+            <h1>Thirty Knights</h1>
+            <BlogContainer api_base_url={api_base_url} />
+        </div>
     )
 }
 

@@ -5,6 +5,5 @@ Travel blog for inter-railing trip
 
 ## Changelog
 ### Improvements
-- Added basic api to get current time
-- Added basic react app to get server time via API
-- Deployed website on Heroku
+- Added basic api with hard coded post titles
+- Added basic react app to get post title via API
