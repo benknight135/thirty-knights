@@ -19,6 +19,8 @@ tasks:
       npm install
     command: |
       cd ${GITPOD_REPO_ROOT}/frontend
+      npm build
       yarn start
     env:
       REACT_APP_HOST: http://localhost:5000
+      REACT_APP_API_URL: /api

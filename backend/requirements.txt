@@ -2,3 +2,5 @@ flask
 flask-restful
 flask-json
 python-dotenv
+flask-cors
+gunicorn

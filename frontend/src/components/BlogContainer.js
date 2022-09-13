@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function BlogContainer() {
+function BlogContainer({api_base_url}) {
   const [apiServerTime, setApiServerTime] = useState(null);
   const [isApiServerTimetLoaded, setIsApiServerTimeLoaded] = useState(false);
   const [apiServerTimeError, setApiServerTimeError] = useState(0);
@@ -14,7 +14,7 @@ function BlogContainer() {
   })
 
   const handleTime = () => {
-    fetch("/api/time")
+    fetch(api_base_url+"/time")
     .then(res => res.json())
     .then(
       (result) => {

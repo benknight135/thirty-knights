@@ -1,0 +1,2 @@
+web: cd ./frontend && yarn start
+app: cd ./frontend && yarn start-api

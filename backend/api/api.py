@@ -5,13 +5,18 @@ from flask_restful import Api
 import api_resources
 
 # create and configure the app
-app = Flask(__name__, instance_relative_config=True)
+script_path = os.path.abspath(os.path.dirname(__file__))
+frontend_build_path = os.path.join(script_path, "..", "..", "frontend", "build")
+app = Flask(__name__, static_folder=frontend_build_path, static_url_path='/')
 
-# ensure the instance folder exists
-try:
-    os.makedirs(app.instance_path)
-except OSError:
-    pass
+# initalise landing page
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
+
+@app.errorhandler(404)
+def not_found(e):
+    return app.send_static_file('index.html')
 
 # initalise API
 api = Api(app)
