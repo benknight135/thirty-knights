@@ -36,6 +36,7 @@ jobs:
         run: |
           PROJ_VERSION=${{ steps.bump-version.outputs.new_version }}
           PROJ_VERSION=${PROJ_VERSION:1}
+          echo "PROJ_VER=$PROJ_VER" >> $GITHUB_ENV
       # Create GitHub release
       - name: GitHub release
         uses: softprops/action-gh-release@v1
