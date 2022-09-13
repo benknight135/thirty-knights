@@ -18,6 +18,3 @@ api = Api(app)
 # add API endpoints
 base_url = "/api"
 api_resources.add_resources(api, base_url)
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=False, port=os.environ.get('PORT', 80))

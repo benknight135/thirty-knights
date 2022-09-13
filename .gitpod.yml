@@ -1,26 +1,12 @@
-# tasks:
-#   # backend
-#   - name: backend
-#     command: |
-#       cd ${GITPOD_REPO_ROOT}/backend
-#       python3 -m venv venv
-#       source venv/bin/activate
-#       pip install -r requirements.txt
-#       deactivate
-#       cd ${GITPOD_REPO_ROOT}/frontend
-#       yarn start-api
-#     env:
-#       FLASK_RUN_PORT: 5000
-#       API_HOST: http://localhost:5080
-#   # frontend
-#   - name: frontend
-#     init: |
-#       cd ${GITPOD_REPO_ROOT}/frontend
-#       npm install
-#     command: |
-#       cd ${GITPOD_REPO_ROOT}/frontend
-#       npm build
-#       yarn start
-#     env:
-#       REACT_APP_HOST: http://localhost:5000
-#       REACT_APP_API_URL: /api
+tasks:
+  - name: run
+    command: |
+      npm install
+      npm run build
+      python3 -m venv venv
+      source venv/bin/activate
+      pip install -r requirements.txt
+      deactivate
+      yarn start
+    env:
+      FLASK_RUN_PORT: 5000
