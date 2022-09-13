@@ -1,2 +1,2 @@
-# thirty-knights
-Travel blog for Inter-railing trip
+# Thirty Knights
+Travel blog for inter-railing trip
