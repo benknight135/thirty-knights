@@ -37,13 +37,6 @@ jobs:
           PROJ_VER=${{ steps.bump-version.outputs.new_version }}
           PROJ_VER=${PROJ_VER:1}
           echo "PROJ_VER=$PROJ_VER" >> $GITHUB_ENV
-      # Create GitHub release
-      - name: GitHub release
-        uses: softprops/action-gh-release@v1
-        with:
-          draft: false
-          body_path: release.md
-          tag_name: v${{ env.PROJ_VER }}
       # Deploy to heroku
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
@@ -52,6 +45,13 @@ jobs:
           heroku_email: "benknight135@gmail.com"
         env:
           HD_PROJ_VER: ${{ env.PROJ_VER }}
+      # Create GitHub release
+      - name: GitHub release
+        uses: softprops/action-gh-release@v1
+        with:
+          draft: false
+          body_path: release.md
+          tag_name: v${{ env.PROJ_VER }}
       # Get git variables
       - name: Get commit variables
         id: commit-vars
