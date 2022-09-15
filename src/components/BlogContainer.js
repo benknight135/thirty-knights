@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
-function PostInfoItem({postInfo}){
+function PostItem({post}){
   return (
     <p>
-      {postInfo.title}
+      {post.title}
     </p>
   );
 }
 
-function PostsInfoList({postsInfo, isLoaded, error}){
+function PostsList({posts, isLoaded, error}){
   if (!isLoaded){
     return(
       <div>
@@ -24,8 +24,8 @@ function PostsInfoList({postsInfo, isLoaded, error}){
   } else {
     return(
       <div>
-        {postsInfo.map(postInfo => (
-          <PostInfoItem key={postInfo.key} postInfo={postInfo} />
+        {posts.map(post => (
+          <PostItem key={post.key} post={post} />
         ))}
       </div>
     )
@@ -33,22 +33,22 @@ function PostsInfoList({postsInfo, isLoaded, error}){
 }
 
 function BlogContainer({api_base_url}) {
-  const [postsInfo, setPostsInfo] = useState(null);
-  const [isPostsInfoLoaded, setIsPostsInfoLoaded] = useState(false);
-  const [postsInfoError, setPostsInfoError] = useState(0);
+  const [posts, setPosts] = useState(null);
+  const [isPostsLoaded, setIsPostsLoaded] = useState(false);
+  const [postsError, setPostsError] = useState(0);
 
   useEffect(()=>{
     const handleFetchUpdate = () => {
-      fetch(api_base_url+"/postsinfo")
+      fetch(api_base_url+"/posts")
       .then(res => res.json())
       .then(
         (result) => {
-          setIsPostsInfoLoaded(true);
-          setPostsInfo(result.info);
+          setIsPostsLoaded(true);
+          setPosts(result.posts);
         },
         (error) => {
-          setIsPostsInfoLoaded(true);
-          setPostsInfoError(error);
+          setIsPostsLoaded(true);
+          setPostsError(error);
           console.log(error);
         }
       )
@@ -58,10 +58,10 @@ function BlogContainer({api_base_url}) {
   }, [api_base_url])
   
   return (
-    <PostsInfoList
-      postsInfo={postsInfo}
-      isLoaded={isPostsInfoLoaded}
-      error={postsInfoError} />
+    <PostsList
+      posts={posts}
+      isLoaded={isPostsLoaded}
+      error={postsError} />
   )
 }
 

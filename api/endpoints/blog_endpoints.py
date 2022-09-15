@@ -1,5 +1,7 @@
+from flask_restful import Api
 from flask_restful import Resource, reqparse
 from flask_json import FlaskJSON, JsonError, json_response, as_json
+import api.posts_manager
 import time
 
 class TimeEndpoint(Resource):
@@ -20,10 +22,14 @@ class TimeEndpoint(Resource):
         return res
 
 
-class PostsInfoEndpoint(Resource):
+class PostsEndpoint(Resource):
     """
     API enpoint to get current server time
     """
+
+    def __init__(self, **kwargs):
+        self.posts_manager = kwargs['posts_manager']
+
     def get(self):
         """
         get current server time
@@ -33,23 +39,22 @@ class PostsInfoEndpoint(Resource):
         tuple, int
             response (json), status code
         """
-        post_infos = [
-            {"title": "First post"},
-            {"title": "Second post"},
-            {"title": "Third post"},
-        ]
-        res_post_infos = []
-        for i, post_info in enumerate(post_infos):
-            post_info['key'] = str(i)
-            res_post_infos.append(post_info)
-        res = {'info': res_post_infos}
+        posts = self.posts_manager.get_posts()
+        print(posts)
+        res_posts = []
+        for i, post in enumerate(posts):
+            post['key'] = str(i)
+            res_posts.append(post)
+        res = {'posts': res_posts}
         return res
 
 
-def add_resources(api, base_url):
+def add_resources(flask_api: Api, base_url: str, posts_manager: api.posts_manager.PostsManager):
     # add API endpoints
-    api.add_resource(
+    flask_api.add_resource(
         TimeEndpoint, base_url + '/time')
 
-    api.add_resource(
-        PostsInfoEndpoint, base_url + '/postsinfo')
+    flask_api.add_resource(
+        PostsEndpoint, base_url + '/posts',
+        resource_class_kwargs={
+            'posts_manager': posts_manager})
