@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 function PostItem({post}){
   return (
-    <p>
-      {post.title}
-    </p>
+    <div>
+      <p>{post.content}</p>
+      <p>{post.last_modified}</p>
+    </div>
   );
 }
 
