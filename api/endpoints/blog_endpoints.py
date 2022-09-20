@@ -40,7 +40,6 @@ class PostsEndpoint(Resource):
             response (json), status code
         """
         posts = self.posts_manager.get_posts()
-        print(posts)
         res_posts = []
         for i, post in enumerate(posts):
             post_json = post.to_json()

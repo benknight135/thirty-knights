@@ -4,3 +4,5 @@ flask-json
 python-dotenv
 flask-cors
 gunicorn
+beautifulsoup4
+requests
