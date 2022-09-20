@@ -1,4 +1,5 @@
 from flask import Flask
-from api import create_app
+from api import init_app
 
-app = create_app(debug=False)
+app = Flask(__name__, static_folder='./build', static_url_path='/')
+app = init_app(app, debug=False)

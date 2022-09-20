@@ -1,4 +1,5 @@
 from flask import Flask
-from api import create_app
+from api import init_app
 
-app = create_app(debug=True)
+app = Flask(__name__)
+app = init_app(app, debug=True)
