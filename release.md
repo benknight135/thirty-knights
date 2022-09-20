@@ -5,7 +5,5 @@ Travel blog for inter-railing trip
 
 ## Changelog
 ### Improvements
-- Updated Day 1 blog post [#4](https://github.com/benknight135/thirty-knights/pull/4)
-- Moved date before time in blog post timestamp [#5](https://github.com/benknight135/thirty-knights/pull/5)
-### Bug fixes
-- Fix blog post sorting [#5](https://github.com/benknight135/thirty-knights/pull/5)
+ - Added day 3 blog post [#6](https://github.com/benknight135/thirty-knights/pull/6)
+ - Added admin page [#7](https://github.com/benknight135/thirty-knights/pull/7)
