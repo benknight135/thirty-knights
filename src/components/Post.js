@@ -1,15 +1,25 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import CircularProgress from '@mui/material/CircularProgress';
 import Markdown from './Markdown';
 
 function Post({ post }) {
-    if (post === null || post === undefined){
-        post = {
-            title: "Failed to load post",
-            timestamp: "never",
-            content: "Failed to load post"
-        }
+    if (post === null || post === undefined) {
+        return (
+            <Grid
+                container
+                spacing={0}
+                direction="column"
+                alignItems="center"
+                justifyContent="top"
+                style={{ minHeight: '100vh' }}
+            >
+                <Grid item xs={3}>
+                    <CircularProgress />
+                </Grid>
+            </Grid>
+        )
     }
 
     return (

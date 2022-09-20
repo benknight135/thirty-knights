@@ -1,7 +1,7 @@
 import os
 from flask import Flask
-from flask_restful import Api
-import api.api_resources as api_resources
+from flask_restful import Api as Flask_Api
+import api.endpoints as endpoints
 import api.posts_manager as posts_mngr
 from enum import Enum
 
@@ -27,7 +27,7 @@ def init_app(app: Flask, debug: bool = True):
         os.path.abspath(os.path.dirname(__file__)), "data")
 
     # initalise API
-    api = Api(app)
+    flask_api = Flask_Api(app)
 
     # initalise posts manager
     if posts_manager_type == PostsManagerType.Local:
@@ -44,6 +44,6 @@ def init_app(app: Flask, debug: bool = True):
 
     # add API endpoints
     base_url = "/api"
-    api_resources.add_resources(api, base_url, posts_manager)
+    endpoints.Endpoints(flask_api, base_url, posts_manager)
 
     return app

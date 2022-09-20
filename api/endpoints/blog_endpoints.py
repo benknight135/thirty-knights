@@ -1,4 +1,4 @@
-from flask_restful import Api
+from flask_restful import Api as Flask_Api
 from flask_restful import Resource, reqparse
 from flask_json import FlaskJSON, JsonError, json_response, as_json
 import api.posts_manager
@@ -71,17 +71,18 @@ class RefreshPostsEndpoint(Resource):
         return res
 
 
-def add_resources(flask_api: Api, base_url: str, posts_manager: api.posts_manager.PostsManager):
-    # add API endpoints
-    flask_api.add_resource(
-        TimeEndpoint, base_url + '/time')
+class BlogEndpoints:
+    def __init__(self, flask_api: Flask_Api, base_url: str, posts_manager: api.posts_manager.PostsManager):
+        # add API endpoints
+        flask_api.add_resource(
+            TimeEndpoint, base_url + '/time')
 
-    flask_api.add_resource(
-        PostsEndpoint, base_url + '/posts',
-        resource_class_kwargs={
-            'posts_manager': posts_manager})
+        flask_api.add_resource(
+            PostsEndpoint, base_url + '/posts',
+            resource_class_kwargs={
+                'posts_manager': posts_manager})
 
-    flask_api.add_resource(
-        RefreshPostsEndpoint, base_url + '/posts/refresh',
-        resource_class_kwargs={
-            'posts_manager': posts_manager})
+        flask_api.add_resource(
+            RefreshPostsEndpoint, base_url + '/posts/refresh',
+            resource_class_kwargs={
+                'posts_manager': posts_manager})
