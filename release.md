@@ -5,4 +5,4 @@ Travel blog for inter-railing trip
 
 ## Changelog
 ### Bug fixed
-- Fix misconfigured flask app initalisation [#]()
+- Fix misconfigured flask app initalisation [#3](https://github.com/benknight135/thirty-knights/pull/3)
