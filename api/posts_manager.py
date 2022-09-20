@@ -77,7 +77,8 @@ class PostsManager:
         self._posts = posts
 
     def set_posts(self, posts: List[Post] = []) -> None:
-        self._posts = posts
+        sorted_posts = sorted(posts, key=lambda d: d.timestamp)
+        self._posts = sorted_posts
 
     def get_posts(self) -> List[Post]:
         return self._posts
@@ -87,9 +88,9 @@ class LocalPostsManager(PostsManager):
     def __init__(self, data_folder: str):
         self.data_folder = data_folder
         super().__init__([])
-        self.refresh_posts()
+        self.refresh()
 
-    def refresh_posts(self) -> None:
+    def refresh(self) -> None:
         post_files = glob(
             os.path.join(self.data_folder, "*.md"))
         posts = []
@@ -98,13 +99,12 @@ class LocalPostsManager(PostsManager):
             posts.append(post)
         super().set_posts(posts)
 
-
 class GitHubPostsManager(PostsManager):
     def __init__(self, owner: str, repository_name: str, branch: str, folder_path: str):
         self._posts_folder_url = self.__get_posts_folder_url(owner, repository_name, branch, folder_path)
         self._raw_posts_base_url = self.__get_raw_posts_base_url(owner, repository_name, branch, folder_path)
         super().__init__()
-        self.refresh_posts()
+        self.refresh()
 
     def __get_posts_folder_url(self, owner: str, repository_name: str, branch: str, folder_path: str):
         return "https://github.com/" + owner + "/" + repository_name + "/tree/" + branch + "/" + folder_path
@@ -115,7 +115,7 @@ class GitHubPostsManager(PostsManager):
     def __get_raw_post_url(self, filename):
         return self._raw_posts_base_url + "/" + filename
 
-    def refresh_posts(self) -> None:
+    def refresh(self) -> None:
         result = requests.get(self._posts_folder_url)
         soup = BeautifulSoup(result.text, 'html.parser')
         found_md_files = soup.find_all(title=re.compile("\.md$"))
