@@ -5,5 +5,7 @@ Travel blog for inter-railing trip
 
 ## Changelog
 ### Improvements
-- Added basic api with hard coded post titles
-- Added basic react app to get post title via API
+- Added post loading from local markdown files
+- Added post loading from remote github markdown files
+- Added link to latest and first post
+- Improve styling
