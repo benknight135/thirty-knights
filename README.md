@@ -1,7 +1,7 @@
 # Thirty Knights
 Travel blog for inter-railing trip
 
-[Visit the website](https://blog.thirtyknights.com/)
+[Visit the website](https://www.thirtyknights.com/)
 
 ## Deployment
 This website is deployed to Heroku using GitHub actions.
