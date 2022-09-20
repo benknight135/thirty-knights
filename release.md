@@ -1,9 +1,11 @@
 # Thirty Knights
 Travel blog for inter-railing trip
 
-[Visit the website](https://thirty-knights.herokuapp.com/).
+[Visit the website](https://www.thirtyknights.com/)
 
 ## Changelog
 ### Improvements
-- Added basic api with hard coded post titles
-- Added basic react app to get post title via API
+- Added post loading from local markdown files
+- Added post loading from remote github markdown files
+- Added link to latest and first post
+- Improve styling
