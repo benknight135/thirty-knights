@@ -9,14 +9,10 @@ class PostsManagerType(Enum):
     Local = 0
     GitHub = 1
 
-def create_app(debug: bool = True):
+def init_app(app: Flask, debug: bool = True):
     if debug:
-        app = Flask(__name__)
-
         posts_manager_type = PostsManagerType.Local
     else:
-        app = Flask(__name__, static_folder='./build', static_url_path='/')
-
         @app.route('/')
         def index():
             return app.send_static_file('index.html')
