@@ -1,5 +1,5 @@
 import React from "react"
-import BlogContainer from "./components/BlogContainer"
+import Blog from "./components/Blog"
 import "./App.css";
 
 function App() {
@@ -8,10 +8,7 @@ function App() {
         api_base_url = process.env.REACT_APP_API_URL;
     }
     return (
-        <div>
-            <h1>Thirty Knights</h1>
-            <BlogContainer api_base_url={api_base_url} />
-        </div>
+        <Blog api_base_url={api_base_url} />
     )
 }
 

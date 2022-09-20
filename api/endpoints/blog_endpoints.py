@@ -24,7 +24,7 @@ class TimeEndpoint(Resource):
 
 class PostsEndpoint(Resource):
     """
-    API enpoint to get current server time
+    API enpoint to get loaded posts
     """
 
     def __init__(self, **kwargs):
@@ -32,7 +32,7 @@ class PostsEndpoint(Resource):
 
     def get(self):
         """
-        get current server time
+        get loaded posts
 
         Returns
         -------
@@ -50,6 +50,28 @@ class PostsEndpoint(Resource):
         return res
 
 
+class RefreshPostsEndpoint(Resource):
+    """
+    API enpoint to refresh posts
+    """
+
+    def __init__(self, **kwargs):
+        self.posts_manager = kwargs['posts_manager']
+
+    def get(self):
+        """
+        refresh posts
+
+        Returns
+        -------
+        tuple, int
+            response (json), status code
+        """
+        self.posts_manager.refresh()
+        res = {'success': True}
+        return res
+
+
 def add_resources(flask_api: Api, base_url: str, posts_manager: api.posts_manager.PostsManager):
     # add API endpoints
     flask_api.add_resource(
@@ -57,5 +79,10 @@ def add_resources(flask_api: Api, base_url: str, posts_manager: api.posts_manage
 
     flask_api.add_resource(
         PostsEndpoint, base_url + '/posts',
+        resource_class_kwargs={
+            'posts_manager': posts_manager})
+
+    flask_api.add_resource(
+        RefreshPostsEndpoint, base_url + '/posts/refresh',
         resource_class_kwargs={
             'posts_manager': posts_manager})
