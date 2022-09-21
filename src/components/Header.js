@@ -28,6 +28,26 @@ function FirstDayLink({ onFirstRequested }){
     )
 }
 
+function PreviousLink({ onPreviousRequested }){
+    const handleClick = (event) => {
+        onPreviousRequested();
+    }
+
+    return (
+        <QuickLink title={"Previous"} onClick={(event) => handleClick(event)} />
+    )
+}
+
+function NextLink({ onNextRequested }){
+    const handleClick = (event) => {
+        onNextRequested();
+    }
+
+    return (
+        <QuickLink title={"Next"} onClick={(event) => handleClick(event)} />
+    )
+}
+
 function LatestLink({ onLatestRequested }){
     const handleClick = (event) => {
         onLatestRequested();
@@ -38,13 +58,21 @@ function LatestLink({ onLatestRequested }){
     )
 }
 
-function Header({ title, onFirstPostRequested, onLatestPostRequested }) {
+function Header({ title, onFirstPostRequested, onLatestPostRequested, onPreviousPostRequested, onNextPostRequested }) {
     const handleFirstRequested = () => {
         onFirstPostRequested();
     }
 
     const handleLatestRequested = () => {
         onLatestPostRequested();
+    }
+
+    const handlePreviousRequested = () => {
+        onPreviousPostRequested()
+    }
+
+    const handleNextRequested = () => {
+        onNextPostRequested();
     }
 
     return (
@@ -65,9 +93,11 @@ function Header({ title, onFirstPostRequested, onLatestPostRequested }) {
                 component="nav"
                 variant="dense"
                 sx={{ justifyContent: 'space-between', overflowX: 'auto' }}>
+                <PreviousLink onPreviousRequested={handlePreviousRequested} />
                 <FirstDayLink onFirstRequested={handleFirstRequested} />
                 <LatestLink onLatestRequested={handleLatestRequested} />
-            </Toolbar>
+                <NextLink onNextRequested={handleNextRequested} />
+                </Toolbar>
         </React.Fragment>
     );
 }

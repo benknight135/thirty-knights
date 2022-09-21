@@ -44,6 +44,7 @@ class PostsEndpoint(Resource):
         for i, post in enumerate(posts):
             post_json = post.to_json()
             post_json['key'] = str(i)
+            post_json['index'] = i
             res_posts.append(post_json)
         res = {'posts': res_posts}
         return res
