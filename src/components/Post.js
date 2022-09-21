@@ -23,16 +23,7 @@ function Post({ post }) {
     }
 
     return (
-        <Grid
-            item
-            xs={12}
-            md={8}
-            sx={{
-                '& .markdown': {
-                    py: 3,
-                },
-            }}
-        >
+        <Grid item>
             <Typography variant="h4">
                 {post.title}
             </Typography>
