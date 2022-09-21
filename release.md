@@ -5,5 +5,4 @@ Travel blog for inter-railing trip
 
 ## Changelog
 ### Improvements
- - Added day 3 blog post [#6](https://github.com/benknight135/thirty-knights/pull/6)
- - Added admin page [#7](https://github.com/benknight135/thirty-knights/pull/7)
+ - Added sidebar [#8](https://github.com/benknight135/thirty-knights/pull/8)
