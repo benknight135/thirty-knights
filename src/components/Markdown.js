@@ -10,7 +10,6 @@ function MarkdownListItem(props) {
 
 function MarkdownImage(props) {
     const { alt, src, title, width } = props;
-    console.log(width);
     return (
         <img 
             alt={alt} 
