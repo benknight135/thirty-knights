@@ -28,17 +28,24 @@ function Markdown (props) {
                 component: Typography,
                 props: {
                     gutterBottom: true,
-                    variant: 'h4',
+                    variant: 'h3',
                     component: 'h1',
                 },
             },
             h2: {
                 component: Typography,
-                props: { gutterBottom: true, variant: 'h6', component: 'h2' },
+                props: { 
+                    gutterBottom: true,
+                    variant: 'h4',
+                    component: 'h2'
+                },
             },
             h3: {
                 component: Typography,
-                props: { gutterBottom: true, variant: 'subtitle1' },
+                props: {
+                    gutterBottom: true,
+                    variant: 'subtitle1'
+                },
             },
             h4: {
                 component: Typography,
@@ -50,7 +57,9 @@ function Markdown (props) {
             },
             p: {
                 component: Typography,
-                props: { paragraph: true },
+                props: {
+                    paragraph: true
+                },
             },
             a: { component: Link },
             li: {
@@ -65,7 +74,12 @@ function Markdown (props) {
         }
     };
 
-    return <ReactMarkdown options={options} {...reactMarkdownProps} />;
+    return (
+        <ReactMarkdown
+            options={options}
+            {...reactMarkdownProps}
+        />
+    );
 }
 
 export default Markdown;
