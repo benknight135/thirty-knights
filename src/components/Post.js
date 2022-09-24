@@ -58,10 +58,7 @@ function Post({ post }) {
                 {post.timestamp}
             </Typography>
             <div 
-                ref={divRef}
-                style={{
-                    width: '55vw',
-                }} >
+                ref={divRef} >
                 <Markdown 
                     className="markdown"
                     key={post.title + post.last_modified}

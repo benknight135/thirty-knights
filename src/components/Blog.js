@@ -21,11 +21,13 @@ function MainPage( { apiBaseUrl, pageMode, post, posts, onPostRequested } ){
     onPostRequested(index);
   }
 
+  const showSidebar = false;
+
   if (pageMode === PageMode.Main){
     return (
       <Grid container columnGap={2}>
-        <Grid item xs={1}>
-          {/* <Sidebar posts={posts} onPostRequested={(index) => handlePostRequested(index)}/> */}
+        <Grid item xs={2}>
+          {showSidebar && <Sidebar posts={posts} onPostRequested={(index) => handlePostRequested(index)}/>}
         </Grid>
         <Grid item xs={10}>
             <Post post={post} />
@@ -35,8 +37,8 @@ function MainPage( { apiBaseUrl, pageMode, post, posts, onPostRequested } ){
   } else if (pageMode === PageMode.Admin){
     return (
       <Grid container columnGap={2}>
-        <Grid item xs={1}>
-          {/* <Sidebar posts={posts} onPostRequested={(index) => handlePostRequested(index)}/> */}
+        <Grid item xs={2}>
+          {showSidebar && <Sidebar posts={posts} onPostRequested={(index) => handlePostRequested(index)}/>}
         </Grid>
         <Grid item xs={10}>
           <Admin apiBaseUrl={apiBaseUrl}/>
