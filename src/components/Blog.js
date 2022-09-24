@@ -25,7 +25,7 @@ function MainPage( { apiBaseUrl, pageMode, post, posts, onPostRequested } ){
     return (
       <Grid container columnGap={2}>
         <Grid item xs={1}>
-          <Sidebar posts={posts} onPostRequested={(index) => handlePostRequested(index)}/>
+          {/* <Sidebar posts={posts} onPostRequested={(index) => handlePostRequested(index)}/> */}
         </Grid>
         <Grid item xs={10}>
             <Post post={post} />
@@ -36,7 +36,7 @@ function MainPage( { apiBaseUrl, pageMode, post, posts, onPostRequested } ){
     return (
       <Grid container columnGap={2}>
         <Grid item xs={1}>
-          <Sidebar posts={posts} onPostRequested={(index) => handlePostRequested(index)}/>
+          {/* <Sidebar posts={posts} onPostRequested={(index) => handlePostRequested(index)}/> */}
         </Grid>
         <Grid item xs={10}>
           <Admin apiBaseUrl={apiBaseUrl}/>

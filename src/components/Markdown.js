@@ -8,43 +8,65 @@ function MarkdownListItem(props) {
     return <Box component="li" sx={{ mt: 1, typography: 'body1' }} {...props} />;
 }
 
-const options = {
-    overrides: {
-        h1: {
-            component: Typography,
-            props: {
-                gutterBottom: true,
-                variant: 'h4',
-                component: 'h1',
-            },
-        },
-        h2: {
-            component: Typography,
-            props: { gutterBottom: true, variant: 'h6', component: 'h2' },
-        },
-        h3: {
-            component: Typography,
-            props: { gutterBottom: true, variant: 'subtitle1' },
-        },
-        h4: {
-            component: Typography,
-            props: {
-                gutterBottom: true,
-                variant: 'caption',
-                paragraph: true,
-            },
-        },
-        p: {
-            component: Typography,
-            props: { paragraph: true },
-        },
-        a: { component: Link },
-        li: {
-            component: MarkdownListItem,
-        },
-    },
-};
+function MarkdownImage(props) {
+    const { alt, src, title, width } = props;
+    console.log(width);
+    return (
+        <img 
+            alt={alt} 
+            src={src} 
+            title={title} 
+            style={ {width: width} }  />
+    );
+  };
 
-export default function Markdown(props) {
-    return <ReactMarkdown options={options} {...props} />;
+function Markdown (props) {
+    const { maxWidth, ...reactMarkdownProps } = props;
+    
+    const options = {
+        overrides: {
+            h1: {
+                component: Typography,
+                props: {
+                    gutterBottom: true,
+                    variant: 'h4',
+                    component: 'h1',
+                },
+            },
+            h2: {
+                component: Typography,
+                props: { gutterBottom: true, variant: 'h6', component: 'h2' },
+            },
+            h3: {
+                component: Typography,
+                props: { gutterBottom: true, variant: 'subtitle1' },
+            },
+            h4: {
+                component: Typography,
+                props: {
+                    gutterBottom: true,
+                    variant: 'caption',
+                    paragraph: true,
+                },
+            },
+            p: {
+                component: Typography,
+                props: { paragraph: true },
+            },
+            a: { component: Link },
+            li: {
+                component: MarkdownListItem,
+            },
+            img: {
+                component: MarkdownImage,
+                props: {
+                    width: maxWidth
+                }
+            }
+        }
+    };
+
+    return <ReactMarkdown options={options} {...reactMarkdownProps} />;
 }
+
+export default Markdown;

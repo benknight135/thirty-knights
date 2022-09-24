@@ -5,4 +5,4 @@ Travel blog for inter-railing trip
 
 ## Changelog
 ### Improvements
- - Added sidebar [#8](https://github.com/benknight135/thirty-knights/pull/8)
+ - Added markdown image rendering [#9](https://github.com/benknight135/thirty-knights/pull/9)
