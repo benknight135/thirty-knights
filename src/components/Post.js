@@ -58,9 +58,6 @@ function Post({ post }) {
             <Typography variant="h4">
                 {post.title}
             </Typography>
-            <Typography variant="h8">
-                {post.timestamp}
-            </Typography>
             <div 
                 ref={divRef} >
                 <Markdown 
