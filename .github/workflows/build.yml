@@ -1,0 +1,21 @@
+name: Build
+
+# Deploys website to heroku test website to verify its working before release
+# https://thirty-knights-dev.herokuapp.com/
+
+# Trigged on push to main branch
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # Deploy to heroku
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "thirty-knights-dev"
+          heroku_email: "benknight135@gmail.com"
