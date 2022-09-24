@@ -5,4 +5,4 @@ Travel blog for inter-railing trip
 
 ## Changelog
 ### Improvements
- - Reduce post margin [#10](https://github.com/benknight135/thirty-knights/pull/10)
+ - Added better post margin [#11](https://github.com/benknight135/thirty-knights/pull/11)

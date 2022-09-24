@@ -23,29 +23,25 @@ function MainPage( { apiBaseUrl, pageMode, post, posts, onPostRequested } ){
 
   const showSidebar = false;
 
+  const sideBar = showSidebar && <Sidebar posts={posts} onPostRequested={(index) => handlePostRequested(index)}/>
+  var content; 
   if (pageMode === PageMode.Main){
-    return (
-      <Grid container columnGap={2}>
-        <Grid item xs={2}>
-          {showSidebar && <Sidebar posts={posts} onPostRequested={(index) => handlePostRequested(index)}/>}
-        </Grid>
-        <Grid item xs={10}>
-            <Post post={post} />
-        </Grid>
-      </Grid>
-    )
+    content = <Post post={post} />;
   } else if (pageMode === PageMode.Admin){
-    return (
-      <Grid container columnGap={2}>
-        <Grid item xs={2}>
-          {showSidebar && <Sidebar posts={posts} onPostRequested={(index) => handlePostRequested(index)}/>}
-        </Grid>
-        <Grid item xs={10}>
-          <Admin apiBaseUrl={apiBaseUrl}/>
-        </Grid>
-      </Grid>
-    )
+    content = <Admin apiBaseUrl={apiBaseUrl}/>;
   }
+
+  return (
+    <Grid container>
+      <Grid item xs={0.25}>
+        {sideBar}
+      </Grid>
+      <Grid item xs={11.5}>
+        {content}
+      </Grid>
+      <Grid item xs={0.25}></Grid>
+    </Grid>
+  )
 }
 
 function BlogContainer({ apiBaseUrl }) {
