@@ -2,6 +2,7 @@ import * as React from 'react';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import train from './train.png';
 
 function QuickLink({ title, onClick }){
     const handleClick = (event) => {
@@ -78,6 +79,7 @@ function Header({ title, onFirstPostRequested, onLatestPostRequested, onPrevious
     return (
         <React.Fragment>
             <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                <img src={train} alt="train" style={ {width: 30} }/>
                 <Typography
                     component="h2"
                     variant="h5"
@@ -88,6 +90,7 @@ function Header({ title, onFirstPostRequested, onLatestPostRequested, onPrevious
                 >
                     {title}
                 </Typography>
+                <img src={train} alt="train" style={ {width: 30} }/>
             </Toolbar>
             <Toolbar
                 component="nav"
