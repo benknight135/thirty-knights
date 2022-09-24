@@ -1,5 +1,9 @@
 name: Release
 
+# Release app by deploying to heruko website
+# https://thirty-knights.herokuapp.com/
+
+
 on:
   workflow_dispatch:
     inputs:
