@@ -15,3 +15,8 @@ First leg is from Brighton to London for the Eurostar. I took a moment to marvel
 Next stop Lille!
 
 ![Eurostar departure board](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day1/departure.jpeg)
+
+## 15:30
+Bienvenue à Lille
+
+![Eurostar departure board](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day1/lille-station.jpeg)
