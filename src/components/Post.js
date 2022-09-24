@@ -11,8 +11,8 @@ function Post({ post }) {
     const [height, setHeight] = useState(0);
     
     useLayoutEffect(() => {
-      setWidth(ref.current.offsetWidth);
-      setHeight(ref.current.offsetHeight);
+      setWidth(divRef.current.offsetWidth);
+      setHeight(divRef.current.offsetHeight);
       }, []);
     
 
