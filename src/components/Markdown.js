@@ -10,7 +10,6 @@ function MarkdownListItem(props) {
 
 function MarkdownImage(props) {
     const { alt, src, title, width } = props;
-    console.log(width);
     return (
         <img 
             alt={alt} 
@@ -21,7 +20,7 @@ function MarkdownImage(props) {
   };
 
 function Markdown (props) {
-    const { maxWidth, ...reactMarkdownProps } = props;
+    const { width, ...reactMarkdownProps } = props;
     
     const options = {
         overrides: {
@@ -60,7 +59,7 @@ function Markdown (props) {
             img: {
                 component: MarkdownImage,
                 props: {
-                    width: maxWidth
+                    width: width
                 }
             }
         }

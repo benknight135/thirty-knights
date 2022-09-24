@@ -30,7 +30,11 @@ function Post({ post }) {
     };
 
     const divRef = useRef(null);
-    const maxWidth = useResize(divRef);
+    let width = useResize(divRef);
+    if ( width === undefined ) {
+        width = 100;
+    }
+    
 
     if (post === null || post === undefined) {
         return (
@@ -62,7 +66,7 @@ function Post({ post }) {
                 <Markdown 
                     className="markdown"
                     key={post.title + post.last_modified}
-                    maxWidth={maxWidth}>
+                    width={width}>
                         {post.content}
                 </Markdown>
             </div>
