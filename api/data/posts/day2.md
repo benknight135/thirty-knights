@@ -34,14 +34,3 @@ After a lunch by the river, watching children fail to steer hire boats to their 
 The rains then cleared up and so I continued to explore the city. Soon stumbling across an interesting parade with lots of people dressed in togas marching down the street singing and chanting. I sent a video of the proceedings around for assistance in translating but it was mostly Oh ay oh which doesn’t mean much of anything. Anyways, looked like some fun! 
 
 ![People in togas](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day2/toga-people.jpeg)
-
-## Daily spend 
-Hostel (The People): €21.64 (£19.31)  
-Croissant: €1 (£0.89)  
-Tarte de la rhubarb: €3.60 (£3.21)  
-Toothbrush & toothpaste: €6.11 (£5.45) 
-Beaux-Arts de Lille: €7 (£6.25)
-Musée d’histoire - €3.80 (£3.39)  
-Chips and 2 cokes - €8 (£7.14)  
-
-Total: €51.15 (£45.65)

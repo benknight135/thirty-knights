@@ -48,11 +48,3 @@ The hostel is clean and friendly. I am staying in a 4 bed dorm, for which I paid
 Spent the evening wondering around the cobbled streets and exploring the city. Boy do I love travelling on my own! It was so much fun to be able to wonder off aimlessly in each and every direction as each and every thing caught my eye. Lille is full of so much amazing old architecture. I found my way down to the river where there are lots of restaurants along the banks and even a few restaurant boats that looked gorgeous with their light reflecting off the water. 
 
 ![Restaurant on the river](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day1/river-restaurant.jpeg)
-
-## Daily spend
-Train (Brighton to London) : £8.95  
-Train (London to Lille): €32 (£28.56)  
-Hostel (The People): €21.64 (£19.31)  
-Sandwich: €1.50 (£1.34)  
-
-Total: €65.18 (£58.16)
