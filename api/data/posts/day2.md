@@ -34,3 +34,10 @@ After a lunch by the river, watching children fail to steer hire boats to their 
 The rains then cleared up and so I continued to explore the city. Soon stumbling across an interesting parade with lots of people dressed in togas marching down the street singing and chanting. I sent a video of the proceedings around for assistance in translating but it was mostly Oh ay oh which doesn’t mean much of anything. Anyways, looked like some fun! 
 
 ![People in togas](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day2/toga-people.jpeg)
+
+## 19:40
+### Carbonnade flamande
+
+For dinner I headed down Les Compagnons de la Grappe which is situated in a small side alley near the Grand Place. I was looking for somewhere that served Carbonnade flamande, a famous dish in the north of France. This is similar to a beef bourguignon but instead of wine the beef is slow cooked in beer. This gives it a really deep, dark flavour. I am normally vegetarian, however while travelling I made the decision to allow myself to eat anything and everything for exactly this kind of reason. To really experience a place is to experience the food. 
+
+![Carbonnade flamande](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day2/dinner.jpeg)
