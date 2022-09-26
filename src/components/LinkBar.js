@@ -33,7 +33,7 @@ function LinkBar({ names, onClick }) {
       <QuickLink
         key={name.key}
         onClick={(event) => handleClick(name)}>
-          name.value
+          {name.value}
       </QuickLink>
             ))}
             </Toolbar>
