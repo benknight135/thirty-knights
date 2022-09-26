@@ -3,7 +3,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
-function QuickLink({ onClick }){
+function QuickLink({ children, onClick }){
     const handleClick = (event) => {
         onClick(event);
     }
