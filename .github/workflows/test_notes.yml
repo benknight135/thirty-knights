@@ -1,0 +1,28 @@
+name: Test Notes
+
+# Build and test app before merging to check for code errors
+
+# Trigged on pull requests to main branch
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Generate Changelog
+        id: generate_changelog
+        uses: benknight135/pull-release-notes-action@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          base-ref: v0.0.1
+          head-ref: ${{ github.ref }}
+      - name: Output
+        id: commit-vars
+        shell: bash
+        run: echo "$foo"
+        env:
+          foo: ${{steps.generate_changelog.outputs.result}}
