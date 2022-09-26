@@ -114,7 +114,6 @@ function BlogContainer({ apiBaseUrl }) {
           (result) => {
             setPosts(result.posts);
             setSelectedPostIndex(result.posts.length - 1);
-            setSelectedPost(result.posts[result.posts.length - 1]);
           },
           (error) => {
             console.log(error);
@@ -148,6 +147,7 @@ function BlogContainer({ apiBaseUrl }) {
     }
   ];
   
+  let post;
   if (posts.length <= 0){
     post = null;
   } else {
