@@ -4,7 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Header from './Header';
-import PostListBar from './PostListBar';
+import LinkBar from './LinkBar';
 import Footer from './Footer'
 import Post from './Post';
 import Admin from './Admin';
@@ -92,6 +92,21 @@ function BlogContainer({ apiBaseUrl }) {
     setSelectedPost(posts[index]);
     setSelectedPostIndex(index);
   }
+  
+  const handleLinkBarClick = (name) => {
+    if ( name.value === "First" ) {
+      handleFirstPostRequested();
+    } 
+    if ( name.value === "Latest" ) {
+      handleLatestPostRequested();
+    } 
+    if ( name.value === "Next" ) {
+      handleNextPostRequested();
+    } 
+    if ( name.value === "Previous" ) {
+      handlePreviousPostRequested();
+    } 
+  } 
  
   const handleSecretClick = () => {
     setPageMode(PageMode.Admin);
@@ -115,28 +130,43 @@ function BlogContainer({ apiBaseUrl }) {
 
     handleFetchUpdate();
   }, [apiBaseUrl])
+  
+  const linkBarNames = [
+    {
+      value: "Previous",
+      key: 0
+    },
+    {
+      value: "First",
+      key: 1
+    },
+    {
+      value: "Latest",
+      key: 2
+    },
+    {
+      value: "Next",
+      key: 3
+    }
+  ];
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container maxWidth="lg">
         <Header title="Thirty Knights" />
-          <PostListBar
-          onFirstPostRequested={handleFirstPostRequested}
-          onLatestPostRequested={handleLatestPostRequested}
-          onNextPostRequested={handleNextPostRequested}
-          onPreviousPostRequested={handlePreviousPostRequested} />
+          <PostLinkBar 
+            names={linkBarNames}
+            onClick={handleLinkBarClick} />
               <MainPage
                 apiBaseUrl={apiBaseUrl}
                 pageMode={pageMode}
                 post={selectedPost}
                 posts={posts}
                 onPostRequested={(index) => handlePostRequested(index)} />
-            <PostListBar
-          onFirstPostRequested={handleFirstPostRequested}
-          onLatestPostRequested={handleLatestPostRequested}
-          onNextPostRequested={handleNextPostRequested}
-          onPreviousPostRequested={handlePreviousPostRequested} />
+        <LinkBar 
+          names={linkBarNames}
+          onClick={handleLinkBarClick} />
       </Container>
       <Footer
         onSecretClick={handleSecretClick}
