@@ -46,8 +46,7 @@ function MainPage( { apiBaseUrl, pageMode, post, posts, onPostRequested } ){
 }
 
 function BlogContainer({ apiBaseUrl }) {
-  const [posts, setPosts] = useState(null);
-  const [selectedPost, setSelectedPost] = useState(null);
+  const [posts, setPosts] = useState([]);
   const [selectedPostIndex, setSelectedPostIndex] = useState(0);
   const [pageMode, setPageMode] = useState(PageMode.Main)
   
@@ -57,7 +56,6 @@ function BlogContainer({ apiBaseUrl }) {
 
   const handleFirstPostRequested = () => {
     handlePostRequested(0);
-    scrollToTop();
   }
 
   const handleLatestPostRequested = () => {
@@ -66,7 +64,6 @@ function BlogContainer({ apiBaseUrl }) {
       newPostIndex = 0;
     }  
     handlePostRequested(newPostIndex);
-    scrollToTop();
   }
 
   const handleNextPostRequested = () => {
@@ -75,7 +72,6 @@ function BlogContainer({ apiBaseUrl }) {
       newPostIndex = posts.length - 1;
     }
     handlePostRequested(newPostIndex);
-    scrollToTop();
   }
 
   const handlePreviousPostRequested = () => {
@@ -84,12 +80,10 @@ function BlogContainer({ apiBaseUrl }) {
       newPostIndex = 0;
     }
     handlePostRequested(newPostIndex);
-    scrollToTop();
   }
 
   const handlePostRequested = (index) => {
     setPageMode(PageMode.Main);
-    setSelectedPost(posts[index]);
     setSelectedPostIndex(index);
   }
   
@@ -120,7 +114,6 @@ function BlogContainer({ apiBaseUrl }) {
           (result) => {
             setPosts(result.posts);
             setSelectedPostIndex(result.posts.length - 1);
-            setSelectedPost(result.posts[result.posts.length - 1]);
           },
           (error) => {
             console.log(error);
@@ -133,7 +126,7 @@ function BlogContainer({ apiBaseUrl }) {
   
   useEffect(() => {
     scrollToTop();
-  }, [])
+  }, [selectedPostIndex])
   
   const linkBarNames = [
     {
@@ -153,6 +146,13 @@ function BlogContainer({ apiBaseUrl }) {
       key: 3
     }
   ];
+  
+  let post;
+  if (posts.length <= 0){
+    post = null;
+  } else {
+    post = posts[selectedPostIndex];
+  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -165,7 +165,7 @@ function BlogContainer({ apiBaseUrl }) {
               <MainPage
                 apiBaseUrl={apiBaseUrl}
                 pageMode={pageMode}
-                post={selectedPost}
+                post={post}
                 posts={posts}
                 onPostRequested={(index) => handlePostRequested(index)} />
         <LinkBar 
