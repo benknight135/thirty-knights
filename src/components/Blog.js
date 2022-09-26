@@ -4,6 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Header from './Header';
+import PostListBar from './PostListBar';
 import Footer from './Footer'
 import Post from './Post';
 import Admin from './Admin';
@@ -49,37 +50,41 @@ function BlogContainer({ apiBaseUrl }) {
   const [selectedPost, setSelectedPost] = useState(null);
   const [selectedPostIndex, setSelectedPostIndex] = useState(0);
   const [pageMode, setPageMode] = useState(PageMode.Main)
+  
+  const scrollToTop = () => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  } 
 
   const handleFirstPostRequested = () => {
-    setPageMode(PageMode.Main);
-    setSelectedPost(posts[0]);
-    setSelectedPostIndex(0);
+    handlePostRequested(0);
+    scrollToTop();
   }
 
   const handleLatestPostRequested = () => {
-    setPageMode(PageMode.Main);
-    setSelectedPost(posts[posts.length - 1]);
-    setSelectedPostIndex(posts.length - 1);
+    var newPostIndex = posts.length - 1;
+    if (newPostIndex < 0 {
+      newPostIndex = 0;
+    }  
+    handlePostRequested(newPostIndex);
+    scrollToTop();
   }
 
   const handleNextPostRequested = () => {
-    setPageMode(PageMode.Main);
     var newPostIndex = selectedPostIndex + 1;
     if (newPostIndex > (posts.length - 1)){
       newPostIndex = posts.length - 1;
     }
-    setSelectedPostIndex(newPostIndex);
-    setSelectedPost(posts[newPostIndex]);
+    handlePostRequested(newPostIndex);
+    scrollToTop();
   }
 
   const handlePreviousPostRequested = () => {
-    setPageMode(PageMode.Main);
     var newPostIndex = selectedPostIndex - 1;
     if (newPostIndex < 0){
       newPostIndex = 0;
     }
-    setSelectedPostIndex(newPostIndex);
-    setSelectedPost(posts[newPostIndex]);
+    handlePostRequested(newPostIndex);
+    scrollToTop();
   }
 
   const handlePostRequested = (index) => {
@@ -88,7 +93,7 @@ function BlogContainer({ apiBaseUrl }) {
     setSelectedPostIndex(index);
   }
  
-  const handleNameClick = () => {
+  const handleSecretClick = () => {
     setPageMode(PageMode.Admin);
   }
 
@@ -115,21 +120,26 @@ function BlogContainer({ apiBaseUrl }) {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container maxWidth="lg">
-        <Header
-          title="Thirty Knights"
+        <Header title="Thirty Knights" />
+          <PostListBar
           onFirstPostRequested={handleFirstPostRequested}
           onLatestPostRequested={handleLatestPostRequested}
           onNextPostRequested={handleNextPostRequested}
           onPreviousPostRequested={handlePreviousPostRequested} />
-          <MainPage
-            apiBaseUrl={apiBaseUrl}
-            pageMode={pageMode}
-            post={selectedPost}
-            posts={posts}
-            onPostRequested={(index) => handlePostRequested(index)} />
+              <MainPage
+                apiBaseUrl={apiBaseUrl}
+                pageMode={pageMode}
+                post={selectedPost}
+                posts={posts}
+                onPostRequested={(index) => handlePostRequested(index)} />
+            <PostListBar
+          onFirstPostRequested={handleFirstPostRequested}
+          onLatestPostRequested={handleLatestPostRequested}
+          onNextPostRequested={handleNextPostRequested}
+          onPreviousPostRequested={handlePreviousPostRequested} />
       </Container>
       <Footer
-        onNameClick={handleNameClick}
+        onSecretClick={handleSecretClick}
       />
     </ThemeProvider>
   )
