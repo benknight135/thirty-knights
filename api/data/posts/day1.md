@@ -1,5 +1,5 @@
 # Day 1: The adventure begins
-## 09:10 24/09/2022
+## 2022/09/24 09:10
 
 ## 09:10
 ### Packed up and ready to go!
