@@ -1,5 +1,5 @@
 # Day 1: The adventure begins
-## 09:10 24/09/2022
+## 2022/09/24 09:10
 
 ## 09:10
 ### Packed up and ready to go!
@@ -13,7 +13,7 @@ FYI in case someone happens upon this blog thinking of doing a similar trip I wi
 ![Person ready for adventure](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day1/packed.jpeg)
 
 ## 10:04
-### To London
+### Goodbye Brighton
 
 First leg is from Brighton to London to catch the Eurostar. I took a moment to marvel at the Brighton train station for a final time before I leave. I really love this city so much and I have so many lovely people around me. I’m a little scared to be leaving my safety net, but that doesn’t stop me being very excited for what is to come.
 
@@ -36,8 +36,15 @@ The Eurostar is a very comfy ride (other than when your ears pop a little) as we
 ## 17:46
 ### The People Hostel
 
-After a short wonder around the city I made my way down to my hostel. I am staying in The People, a hostel just a 30min walk from the station. I will be staying here for two nights. This gives me a full day to explore Lille tomorrow and plenty of time to rest before moving on as I know the next train journey is going to be a long one. Soon after I arrived the bells from the Cathedral near by started ringing beautifully. This is the Notre Dame de la Treille Cathedral. I will certainly go for a proper look around tomorrow.
+After a short wander around the city I made my way down to my hostel. I am staying in The People, a hostel just a 30min walk from the station. I will be staying here for two nights. This gives me a full day to explore Lille tomorrow and plenty of time to rest before moving on as I know the next train journey is going to be a long one. Soon after I arrived the bells from the Cathedral near by started ringing beautifully. This is the Notre Dame de la Treille Cathedral. I will certainly go for a proper look around tomorrow.
 
 The hostel is clean and friendly. I am staying in a 4 bed dorm, for which I paid £38.62 for two nights (£19.31 per night).
 
 ![Bed in hostel in Lille](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day1/hostel-beds.jpeg)
+
+## 20:42
+### Night stroll in Lille
+
+Spent the evening wondering around the cobbled streets and exploring the city. Boy do I love travelling on my own! It was so much fun to be able to wonder off aimlessly in each and every direction as each and every thing caught my eye. Lille is full of so much amazing old architecture. I found my way down to the river where there are lots of restaurants along the banks and even a few restaurant boats that looked gorgeous with their light reflecting off the water. 
+
+![Restaurant on the river](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day1/river-restaurant.jpeg)
