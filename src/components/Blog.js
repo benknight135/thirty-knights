@@ -131,6 +131,10 @@ function BlogContainer({ apiBaseUrl }) {
     handleFetchUpdate();
   }, [apiBaseUrl])
   
+  useEffect(() => {
+    scrollToTop();
+  }, [])
+  
   const linkBarNames = [
     {
       value: "Previous",
