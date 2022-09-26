@@ -1,5 +1,5 @@
 # Day 3: Three countries in seven hours
-## 07:53 26/09/2022
+## 2022/09/26 07:53
 
 ## 11:24
 ### Crossing boarders at speed
