@@ -39,4 +39,4 @@ jobs:
         shell: bash
         run: echo "test"
         env:
-          foo: body: ${{steps.generate_changelog.outputs.result}}
+          foo: ${{steps.generate_changelog.outputs.result}}
