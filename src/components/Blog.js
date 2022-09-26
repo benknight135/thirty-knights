@@ -4,6 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Header from './Header';
+import LinkBar from './LinkBar';
 import Footer from './Footer'
 import Post from './Post';
 import Admin from './Admin';
@@ -49,37 +50,41 @@ function BlogContainer({ apiBaseUrl }) {
   const [selectedPost, setSelectedPost] = useState(null);
   const [selectedPostIndex, setSelectedPostIndex] = useState(0);
   const [pageMode, setPageMode] = useState(PageMode.Main)
+  
+  const scrollToTop = () => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  } 
 
   const handleFirstPostRequested = () => {
-    setPageMode(PageMode.Main);
-    setSelectedPost(posts[0]);
-    setSelectedPostIndex(0);
+    handlePostRequested(0);
+    scrollToTop();
   }
 
   const handleLatestPostRequested = () => {
-    setPageMode(PageMode.Main);
-    setSelectedPost(posts[posts.length - 1]);
-    setSelectedPostIndex(posts.length - 1);
+    var newPostIndex = posts.length - 1;
+    if (newPostIndex < 0) {
+      newPostIndex = 0;
+    }  
+    handlePostRequested(newPostIndex);
+    scrollToTop();
   }
 
   const handleNextPostRequested = () => {
-    setPageMode(PageMode.Main);
     var newPostIndex = selectedPostIndex + 1;
     if (newPostIndex > (posts.length - 1)){
       newPostIndex = posts.length - 1;
     }
-    setSelectedPostIndex(newPostIndex);
-    setSelectedPost(posts[newPostIndex]);
+    handlePostRequested(newPostIndex);
+    scrollToTop();
   }
 
   const handlePreviousPostRequested = () => {
-    setPageMode(PageMode.Main);
     var newPostIndex = selectedPostIndex - 1;
     if (newPostIndex < 0){
       newPostIndex = 0;
     }
-    setSelectedPostIndex(newPostIndex);
-    setSelectedPost(posts[newPostIndex]);
+    handlePostRequested(newPostIndex);
+    scrollToTop();
   }
 
   const handlePostRequested = (index) => {
@@ -87,8 +92,23 @@ function BlogContainer({ apiBaseUrl }) {
     setSelectedPost(posts[index]);
     setSelectedPostIndex(index);
   }
+  
+  const handleLinkBarClick = (name) => {
+    if ( name.value === "First" ) {
+      handleFirstPostRequested();
+    } 
+    if ( name.value === "Latest" ) {
+      handleLatestPostRequested();
+    } 
+    if ( name.value === "Next" ) {
+      handleNextPostRequested();
+    } 
+    if ( name.value === "Previous" ) {
+      handlePreviousPostRequested();
+    } 
+  } 
  
-  const handleNameClick = () => {
+  const handleSecretClick = () => {
     setPageMode(PageMode.Admin);
   }
 
@@ -110,26 +130,46 @@ function BlogContainer({ apiBaseUrl }) {
 
     handleFetchUpdate();
   }, [apiBaseUrl])
+  
+  const linkBarNames = [
+    {
+      value: "Previous",
+      key: 0
+    },
+    {
+      value: "First",
+      key: 1
+    },
+    {
+      value: "Latest",
+      key: 2
+    },
+    {
+      value: "Next",
+      key: 3
+    }
+  ];
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container maxWidth="lg">
-        <Header
-          title="Thirty Knights"
-          onFirstPostRequested={handleFirstPostRequested}
-          onLatestPostRequested={handleLatestPostRequested}
-          onNextPostRequested={handleNextPostRequested}
-          onPreviousPostRequested={handlePreviousPostRequested} />
-          <MainPage
-            apiBaseUrl={apiBaseUrl}
-            pageMode={pageMode}
-            post={selectedPost}
-            posts={posts}
-            onPostRequested={(index) => handlePostRequested(index)} />
+        <Header title="Thirty Knights" />
+          <LinkBar 
+            names={linkBarNames}
+            onClick={handleLinkBarClick} />
+              <MainPage
+                apiBaseUrl={apiBaseUrl}
+                pageMode={pageMode}
+                post={selectedPost}
+                posts={posts}
+                onPostRequested={(index) => handlePostRequested(index)} />
+        <LinkBar 
+          names={linkBarNames}
+          onClick={handleLinkBarClick} />
       </Container>
       <Footer
-        onNameClick={handleNameClick}
+        onSecretClick={handleSecretClick}
       />
     </ThemeProvider>
   )
