@@ -49,13 +49,21 @@ jobs:
           heroku_email: "benknight135@gmail.com"
         env:
           HD_PROJ_VER: ${{ env.PROJ_VER }}
+      - name: Generate Changelog
+        id: generate_changelog
+        uses: nblagoev/pull-release-notes-action@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          base-ref: ${{ steps.latest-tag.outputs.tag }}
+          head-ref: ${{ github.ref }}
       # Create GitHub release
       - name: GitHub release
         uses: softprops/action-gh-release@v1
         with:
-          draft: false
-          body_path: release.md
+          draft: false 
           tag_name: v${{ env.PROJ_VER }}
+          body: ${{steps.generate_changelog.outputs.result}}
       # Get git variables
       - name: Get commit variables
         id: commit-vars
