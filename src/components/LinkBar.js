@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
 function QuickLink({ children, onClick }){
