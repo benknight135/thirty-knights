@@ -35,15 +35,15 @@ function SorceCodeLink() {
     );
 }
 
-function Footer({ onNameClick }) {
-    const handleNameClick = () => {
-        onNameClick();
+function Footer({ onSecretClick }) {
+    const handleSecretClick = () => {
+        onSecretClick();
     }
 
     return (
         <Box component="footer" sx={{ bgcolor: 'background.paper', py: 6 }}>
             <Container maxWidth="lg">
-                <CreatedBy onClick={handleNameClick} />
+                <CreatedBy onClick={handleSecretClick} />
                 <SorceCodeLink />
             </Container>
         </Box>
