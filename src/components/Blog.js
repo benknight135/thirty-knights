@@ -155,7 +155,7 @@ function BlogContainer({ apiBaseUrl }) {
       <CssBaseline />
       <Container maxWidth="lg">
         <Header title="Thirty Knights" />
-          <PostLinkBar 
+          <LinkBar 
             names={linkBarNames}
             onClick={handleLinkBarClick} />
               <MainPage
