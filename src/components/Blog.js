@@ -62,7 +62,7 @@ function BlogContainer({ apiBaseUrl }) {
 
   const handleLatestPostRequested = () => {
     var newPostIndex = posts.length - 1;
-    if (newPostIndex < 0 {
+    if (newPostIndex < 0) {
       newPostIndex = 0;
     }  
     handlePostRequested(newPostIndex);
