@@ -1,10 +1,10 @@
 name: Changelog
 
-# Build and test app before merging to check for code errors
+# Keep track of current changelog
 
 # Trigged on pull requests to main branch
 on:
-  pull_request:
+  push:
     branches: [ main ]
 
 jobs:
