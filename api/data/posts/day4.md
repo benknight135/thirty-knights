@@ -20,7 +20,7 @@ After an unexpectedly early start I thought I’d make the most of it and head o
 
 Whilst exploring the city I kept running into a couple of small groups of 5/6 people all wearing either matching red hats or matching yellow hats. There were clearly on a treasure hunt of some kind and I believe in competing to find everything first. A fantastic way to explore a city so spent a little bit of time following them around from a distance to see what interesting places they may take me. This took me all over the Ancienne Ville through nook and cranny.
 
-![People in red hats on treasure hunt](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day4/red-hat.jpeg)
+![People in red hats on treasure hunt](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day4/red-hats.jpeg)
 
 ## 15:32
 ### Sheltering in an aqueduct
