@@ -28,3 +28,8 @@ Whilst exploring the city I kept running into a couple of small groups of 5/6 pe
 The weather took a turn for the worse in the afternoon with very heavy rain. To escape I find shelter near the old aqueduct that run along the east of the ancient village. The rain continued heavily for a long while, giving me good chance to listen podcast of a fan made retelling of the season 8 of game of thrones as a radio play, looking fix all the problems from the last season. It’s wonderful to listen to fantasy while surrounded with ancient architecture and beautiful green spaces. 
 
 ![River](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day4/river.jpeg)
+
+## Timeline
+Todays Google location timeline:
+
+![Timeline](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day4/timeline.jpeg)
