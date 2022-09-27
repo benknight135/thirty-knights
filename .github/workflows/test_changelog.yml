@@ -24,7 +24,7 @@ jobs:
         id: bump-version
         with:
           current_version: ${{ steps.latest-tag.outputs.tag }}
-          level: ${{ github.event.inputs.level }}
+          level: patch
       # Add generated version to VERSION file
       # remove 'v' character from version string
       - name: Add to Version file
