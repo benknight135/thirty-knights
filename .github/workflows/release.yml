@@ -79,13 +79,3 @@ jobs:
           target_branch: prod
           github_token: ${{ github.token }}
           message: merged ${{ steps.commit-vars.outputs.sha_short }}
-
-  cleanup:
-    needs: [deploy]
-    runs-on: ubuntu-latest
-
-    steps:
-      # Cleanup artifacts used for job sharing
-      - uses: geekyeggo/delete-artifact@v1
-        with:
-          name: version-file-${{ github.sha }}
