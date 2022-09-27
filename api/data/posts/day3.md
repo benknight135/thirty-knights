@@ -32,6 +32,6 @@ After settling in I headed out in search of dinner. Being as Metz is just down t
 ![Quiche Lorraine](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day3/quiche-lorraine.jpeg)
 
 ## Timeline
-Todays Google location timeline:
+Todays Google location timeline
 
 ![Timeline](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day3/timeline.jpeg)

@@ -43,6 +43,6 @@ For dinner I headed down to Les Compagnons de la Grappe which is situated in a s
 ![Carbonnade flamande](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day2/dinner.jpeg)
 
 ## Timeline
-Todays Google location timeline:
+Todays Google location timeline
 
 ![Timeline](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day2/timeline.jpeg)
