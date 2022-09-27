@@ -30,6 +30,6 @@ The weather took a turn for the worse in the afternoon with very heavy rain. To 
 ![River](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day4/river.jpeg)
 
 ## Timeline
-Todays Google location timeline:
+Todays Google location timeline
 
 ![Timeline](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day4/timeline.jpeg)

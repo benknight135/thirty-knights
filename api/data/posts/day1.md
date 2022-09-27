@@ -50,6 +50,6 @@ Spent the evening wondering around the cobbled streets and exploring the city. B
 ![Restaurant on the river](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day1/river-restaurant.jpeg)
 
 ## Timeline
-Todays Google location timeline:
+Todays Google location timeline
 
 ![Timeline](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day1/timeline.jpeg)
