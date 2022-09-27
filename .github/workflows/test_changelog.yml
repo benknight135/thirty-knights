@@ -41,8 +41,7 @@ jobs:
         with:
            fromTag: ${{ steps.latest-tag.outputs.tag }}
            toTag: ${{ github.ref }}
-      # Create GitHub release
-      - name: GitHub release
+      - name: Output
         shell: bash
         run: echo "$changelog"
         env: 
