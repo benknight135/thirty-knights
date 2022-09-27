@@ -1,0 +1,49 @@
+name: Test Changelog
+
+# Build and test app before merging to check for code errors
+
+# Trigged on pull requests to main branch
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # Get latest released version
+      - uses: oprypin/find-latest-tag@v1
+        with:
+          repository: benknight135/thirty-knights  # The repository to scan.
+          releases-only: true  # All relevant tags have a GitHub release for them.
+        id: latest-tag  # The step ID to refer to later.
+      # Generate new release version
+      - name: Generate new version
+        uses: actions-ecosystem/action-bump-semver@v1
+        id: bump-version
+        with:
+          current_version: ${{ steps.latest-tag.outputs.tag }}
+          level: ${{ github.event.inputs.level }}
+      # Add generated version to VERSION file
+      # remove 'v' character from version string
+      - name: Add to Version file
+        shell: bash
+        run: |
+          PROJ_VER=${{ steps.bump-version.outputs.new_version }}
+          PROJ_VER=${PROJ_VER:1}
+          echo "PROJ_VER=$PROJ_VER" >> $GITHUB_ENV  
+      - name: Build Changelog
+        id: github_release
+        uses: mikepenz/release-changelog-builder-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+           fromTag: ${{ steps.latest-tag.outputs.tag }}
+           toTag: ${{ github.ref }}
+      # Create GitHub release
+      - name: GitHub release
+        shell: bash
+        run: echo "$changelog"
+        env: 
+          changelog: ${{steps.github_release.outputs.changelog}}
