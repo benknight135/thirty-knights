@@ -28,6 +28,6 @@ Another claim to fame for Colmar is that the sculpture of the Statue of Liberty,
 ## 17:32
 ### Bern baby Bern
 
-With absorbing all I possibly could from Colmar in a flying visit, I headed off to the station in the direction of Bern. It was such a wonderful idea to stop off at Colmar rather than just getting a train to Bern as was originally planned. I am so greatly for the flexibility of traveling this way and the unexpected success that today has been. 
+With absorbing all I possibly could from Colmar in a flying visit, I headed off to the station in the direction of Bern. It was such a wonderful idea to stop off at Colmar rather than just getting a train to Bern as was originally planned. I am so grateful for the flexibility of traveling this way and the unexpected success that today has been. 
 
 ![Bern hostel](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day5/bern-hostel.jpeg)
