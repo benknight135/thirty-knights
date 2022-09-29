@@ -20,7 +20,7 @@ I had my lunch staring out across the hills, the view and the effort to get ther
 ![Person with arms raised looking over mountain scenery](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day6/mountain-cheer.jpeg)
 
 ## 15:22
-### Hall my weary feet to Milan
+### Haul my weary feet to Milan
 
 All in all the hike took around 2 hours from start the finish. And by the time I had reached the station I was exhausted. I had originally planned to also spend some time in Domodossola. However, once I arrived there, I had no WiFi and no signal and my feet hurt so I decided against it and headed straight for Milan. Because of this change of plan, and not having a way to look up trains, I ended up on a train that required a reservation fee of €20. But at that point I would have paid anything to get to Milan and a bed quickly.
 
@@ -29,7 +29,7 @@ All in all the hike took around 2 hours from start the finish. And by the time I
 ## 19:09
 ### Battle to rest
 
-I hadn’t quite appreciate how far away the hostel was from the station. It took nearly 50mins to walk there. I could have taken public transport or a taxi but doing that in a city I am completely unfamiliar with and a language I don’t know at all was a very scary concept to me! I battled my through the busy city and eventually made it to the New Generation hostel. And most importantly a shower and a bed. Yet with all the exhaustion, I would do it all again, for that mountain view.  
+I hadn’t quite appreciated how far away the hostel was from the station. It took nearly 50mins to walk there. I could have taken public transport or a taxi but doing that in a city I am completely unfamiliar with and in a language I don’t know at all was a very scary concept to me! I battled my through the busy city and eventually made it to the New Generation hostel. And most importantly a shower and a bed. Yet with all the exhaustion, I would do it all again, for that mountain view.  
 
 ![Bed in hostel](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day6/hostel-bed.jpeg)
 
