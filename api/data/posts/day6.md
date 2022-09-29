@@ -6,7 +6,7 @@
 
 With the success of yesterdays trip to Colmar, I decided to once again break up what would be a long train ride into a couple of smaller journeys with a day visit in between. Today, as I was heading to Milan, the train would go over the mountains so I broke this into a stop at Brig and a stop a Domodosola.  
 
-The train ride from Bern to Brig was incredible beautiful, swaying through the valleys beneath the mountains. Then just before arriving in Brig, there is 15-20mins section completely in the dark as we hurtle through a long tunnel through the mountainside, making my ears pop many times as the pressure changed. 
+The train ride from Bern to Brig was incredibly beautiful, swaying through the valleys beneath the mountains. Then just before arriving in Brig, there was a 15-20mins section completely in the dark as we hurtle through a long tunnel through the mountainside, making my ears pop many times as the pressure changed. 
 
 ![View of mountains from the train](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day6/train-view.jpeg)
 
@@ -15,7 +15,7 @@ The train ride from Bern to Brig was incredible beautiful, swaying through the v
 
 After seeing the beautiful rolling hills from the train window, I had to go and explore them for myself. I set off in the direction of the best hill I saw. I came across a wonderful public hiking route that started at a stunning waterfall then meandered up the hillside. Very steep in parts and a large effort with my heavy bag on my back but absolutely 100% worth it. I eventually reached a clearing which gave views from high above Brig as well as stunning mountains and cliff faces in all directions. I had a genuinely soul nourishing experience taking in all that was before me. 
 
-I had my lunch staring out across the hills, the view and the effort to get there making it taste ever so sweeter. Then headed all the way back down. At the bottom where the waterfall was, there was a cave with a small river running through it. I jumped from rock to rock and explored the inside of the cave that opened up again at the other end. There was a large rock here that was perfectly situated for me to take off my shoes and socks and stick my feet in the cooling water as I calmed myself with the babbling brook.
+I had my lunch staring out across the hills, the view and the effort to get there making it taste ever so sweeter. Then headed all the way back down. At the bottom, where the waterfall was, there was a cave with a small river running through it. I jumped from rock to rock and explored the inside of the cave that opened up again at the other end. There was a large rock here that was perfectly situated for me to take off my shoes and socks and stick my feet in the cooling water as I calmed myself with the babbling brook.
 
 ![Person with arms raised looking over mountain scenery](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day6/mountain-cheer.jpeg)
 
