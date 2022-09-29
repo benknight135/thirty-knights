@@ -29,7 +29,7 @@ All in all the hike took around 2 hours from start the finish. And by the time I
 ## 19:09
 ### Battle to rest
 
-I hadn’t quite appreciate how far away the hostel was from the station. It took nearly 50mins to walk there. I could have taken public transport or a taxi but doing that in a city I am completely unfamiliar with and a language I don’t know at all was a very scary concept to me! I battled my through the busy city and eventually made it to the New Generation hostel. And most importantly a shower and a bed. 
+I hadn’t quite appreciate how far away the hostel was from the station. It took nearly 50mins to walk there. I could have taken public transport or a taxi but doing that in a city I am completely unfamiliar with and a language I don’t know at all was a very scary concept to me! I battled my through the busy city and eventually made it to the New Generation hostel. And most importantly a shower and a bed. Yet with all the exhaustion, I would do it all again, for that mountain view.  
 
 ![Bed in hostel](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day6/hostel-bed.jpeg)
 
