@@ -4,7 +4,7 @@
 ## 09:41
 ### To Verona
 
-Today I am on my way to Venice, taking a day trip to Verona on the way. My feet are still saw from the long walks of the past few days so I will decide how much exploring to do in Verona once I arrive.
+Today I am on my way to Venice, taking a day trip to Verona on the way. My feet are still sore from the long walks of the past few days so I will decide how much exploring to do in Verona once I arrive.
 
 ![View from train towards Verona](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day9/train-view.jpeg)
 
