@@ -11,6 +11,6 @@ Today I am on my way to Venice, taking a day trip to Verona on the way. My feet 
 ## 12:28
 ### Verona
 
-After a little bit lunch and some exploring of Ponte Scaligero Ponte di Castelvecchio and the surrounding area I quickly got very exhausted. I have been doing a lot of walking over the last few days and it’s finally taking its toll. I had looked up a few places to explore around Verona but I didn’t feel much like walking to them without knowing they would be worth it. I decided to conserve my energy for Venice tomorrow and head back to the station. 
+After a little bit of lunch and some exploring of Ponte Scaligero Ponte di Castelvecchio and the surrounding area I quickly got very exhausted. I have been doing a lot of walking over the last few days and it’s finally taking its toll. I had looked up a few places to explore around Verona but I didn’t feel much like walking to them without knowing they would be worth it. I decided to conserve my energy for Venice tomorrow and head back to the station. I did on my way make sure to walk past the famous arena and couple of additional buildings in Città Antica which were very beautiful. 
 
-![Selfie in Verona](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day9/verona-selfie.jpeg)
+![Selfie in front of Arena](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day9/arena-selfie.jpeg)
