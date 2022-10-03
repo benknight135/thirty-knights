@@ -4,7 +4,7 @@
 ## 11:38
 ### Queue
 
-The day started with a continental breakfast at the hostel after which I headed out towards the Venetian island. I had indented to buy the ticket to St Lucia online rather than use the kiosk machines but couldn’t get on WiFi when I got to the station so had to wait in 30 minute queue to get to the machine. But eventually got the ticket and got on the quick hop to the island.
+The day started with a continental breakfast at the hostel after which I headed out towards the Venetian island. I had intended to buy the ticket to St Lucia online rather than use the kiosk machines but couldn’t get on WiFi when I got to the station so had to wait in 30 minute queue to get to the machine. But eventually got the ticket and got on the quick hop to the island.
 
 ![Selfie on Bridge in Venice](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day10/bridge-selfie.jpeg)
 
