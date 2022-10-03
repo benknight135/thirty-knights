@@ -11,14 +11,14 @@ The day started with a continental breakfast at the hostel after which I headed 
 ## 14:19
 ### Seafood pasta
 
-The streets of Venice were very busy and full of tourists that at first it wasn’t a pleasant experience. But after exploring out to less traversed alleys for some quiet, everything got much more pleasant. After I recovered, I headed back down to the waters edge to find a lovely restaurant where I sipped on a piñata colada and had a very tasty seafood spaghetti. 
+The streets of Venice were so very busy and full of tourists that at first it wasn’t a pleasant experience. But after exploring out to less traversed alleys for some quiet, everything got much more pleasant. After I recovered, I headed back down to the waters edge to find a lovely restaurant where I sipped on a piñata colada and had a very tasty seafood spaghetti. 
 
 ![Seafood spaghetti](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day10/seafood-spaghetti.jpeg)
 
 ## 15:01
 ### Opera
 
-After lunch I continued to explore Venice and eventually found my way to courtyard in front of a grand building where an opera singer was projecting incredible sounds. I stayed here a while taking in the soothing sounds.
+After lunch I continued to explore Venice and eventually found my way to a courtyard in front of a grand building where an opera singer was projecting incredible sounds. I stayed here a while taking in the soothing sounds.
 
 ![Opera singer](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day10/opera.jpeg)
 
