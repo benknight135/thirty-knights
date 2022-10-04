@@ -6,7 +6,7 @@
 
 Along the way from Venice to Florence my train was delayed by 30 minutes which meant missing the changer over in Bologna. Luckily this was timed just perfectly for lunch. I found a pizzeria near the station serving rollo, a rolled pizza slice with a base that tasted like a cross between a crepe and a thin pizza. Will have to look up a recipe when I am back in England to see if I recreated it as it was delicious! 
 
-After I bite to eat I had a small explore of the sites near the station such as Porta Galliera and a lovely park (Parco della Montagnola) but couldn’t wonder too far as my next train was only an hour away. But this did allow me some time to think about what I would like to do when I am here properly in a few days. (Potentially a food tour!). 
+After a bite to eat I had a small explore of the sites near the station such as Porta Galliera and a lovely park (Parco della Montagnola) but couldn’t wonder too far as my next train was only an hour away. But this did allow me some time to think about what I would like to do when I am here properly in a few days. (Potentially a food tour!). 
 
 ![Selfie of person eating rollo](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day11/rollo.jpeg)
 
