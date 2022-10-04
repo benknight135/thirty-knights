@@ -29,4 +29,11 @@ I finished the day at the Leonardo da Vinci museum that had many replicas of da 
 
 ![Leonardo da Vinci museum](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day10/da-vinci.jpeg)
 
+## 23:56
+### Karaoke
+
+Each night at the hostel bar they half events and on Monday nights they put on Karaoke! Rather backing music they have a live musician that plays the songs with you. It was so much fun to hear so many people sing their hearts out to “I want it that way” and “Sweet Caroline”. There were also a couple of surprising good singers such as an Italian guy that sounded just like Ed Sheeran! It was a great fun atmosphere. 
+
+![Group singing Karaoke](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day10/karaoke.jpeg)
+
 
