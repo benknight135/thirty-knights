@@ -27,6 +27,11 @@ I arrived in Metz around 4pm and quickly made my way to the Airbnb I had booked.
 ## 20:34
 ### Quiche Lorraine
 
-After settling in I headed out in search of dinner. Being as Metz is just down the road from Lorraine I was determined to find somewhere that served Quiche Lorraine. It was raining pretty heavily and was still fairly early in the evening so many places were shut but I ended up finding a lovely place in an area near the centre of Metz with lots of resultants called Place Saint-Jacques. I ordered a Quiche Lorraine as well as a mojito. Got to try and bring the sun when il plute des cordes. The quiche was very light and creamy with a flio pastry crust so while it was a very large size slice, the portion was just right. 
+After settling in I headed out in search of dinner. Being as Metz is just down the road from Lorraine I was determined to find somewhere that served Quiche Lorraine. It was raining pretty heavily and was still fairly early in the evening so many places were shut but I ended up finding a lovely place in an area near the centre of Metz with lots of restaurants called Place Saint-Jacques. I ordered a Quiche Lorraine as well as a mojito. Got to try and bring the sun when il plue des cordes. The quiche was very light and creamy with a filo pastry crust so while it was a very large size slice, the portion was just right. 
 
 ![Quiche Lorraine](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day3/quiche-lorraine.jpeg)
+
+## Timeline
+Todays Google location timeline
+
+![Timeline](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day3/timeline.jpeg)

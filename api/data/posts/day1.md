@@ -48,3 +48,8 @@ The hostel is clean and friendly. I am staying in a 4 bed dorm, for which I paid
 Spent the evening wondering around the cobbled streets and exploring the city. Boy do I love travelling on my own! It was so much fun to be able to wonder off aimlessly in each and every direction as each and every thing caught my eye. Lille is full of so much amazing old architecture. I found my way down to the river where there are lots of restaurants along the banks and even a few restaurant boats that looked gorgeous with their light reflecting off the water. 
 
 ![Restaurant on the river](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day1/river-restaurant.jpeg)
+
+## Timeline
+Todays Google location timeline
+
+![Timeline](https://raw.githubusercontent.com/benknight135/thirty-knights/main/api/data/posts/day1/timeline.jpeg)

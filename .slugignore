@@ -1,0 +1,3 @@
+# Ignore files/folders in heroku slug
+
+/api/data/posts/*
