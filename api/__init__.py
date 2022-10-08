@@ -35,9 +35,9 @@ def init_app(app: Flask, debug: bool = True):
         posts_manager = posts_mngr.LocalPostsManager(posts_folder)
     elif posts_manager_type == PostsManagerType.GitHub:
         owner = "benknight135"
-        repo = "thirty-knights"
+        repo = "thirty-knights-posts"
         branch = "main"
-        folder_path = "api/data/posts"
+        folder_path = "data"
         posts_manager = posts_mngr.GitHubPostsManager(
             owner, repo, branch, folder_path
         )
